@@ -1,4 +1,4 @@
-Need to symlink to 
+Need to symlink: `ln -s ~/.config/ghostty/config.ghostty /Users/drewyang/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty` 
 
 macOS-specific Path (macOS only):
 $HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty.
