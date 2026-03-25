@@ -3,6 +3,7 @@
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export DISABLE_MAGIC_FUNCTIONS=true
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -110,10 +111,27 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias watch='watch '
+alias mk='minikube'
 alias k='kubectl'
+alias kz='kustomize'
+alias kx='kubectx'
+alias kn='kubens'
+alias kk='kubectl -n kube-system'
 alias tf='terraform'
 
+# Arize
+alias kao='kubectl -n arize-operator'
+alias ka='kubectl -n arize'
+alias kas='kubectl -n arize-spark'
+
+# Phoenix
+alias kp='kubectl -n phoenix'
+
+
+# Functions
+source ~/work/utils/destroy_deployment.sh
+source ~/work/utils/clean_merged_branches.sh
+source ~/work/utils/make_jwt.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -128,5 +146,21 @@ else
     fi
 fi
 unset __conda_setup
+
+if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/mamba.sh" ]; then
+    . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
+
+# Minikube completion
+source ~/.minikube-completion
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
+[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
+# Postgres17
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 

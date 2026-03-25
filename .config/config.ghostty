@@ -1,0 +1,24 @@
+font-family = "Monaco"
+font-thicken = true
+font-size = 16
+
+# oh-my-zsh - Eastwood 
+background = 272c34
+foreground = c3cfe0
+cursor-color = c7c7c7
+palette = 0 = 3e4352
+palette = 1 = f1475d
+palette = 2 = 92e364
+palette = 3 = db8c44
+palette = 4 = 17afff
+palette = 5 = d77adf
+palette = 6 = 00d1df
+palette = 7 = b9bfca
+palette = 8 = 6f7683
+palette = 9 = f0475d
+palette = 10 = 91e364
+palette = 11 = db8c44
+palette = 12 = 17afff
+palette = 13 = d77adf
+palette = 14 = 01d0df
+palette = 15 = fefefe

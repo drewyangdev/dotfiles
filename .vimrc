@@ -28,9 +28,15 @@ set backspace=indent,eol,start
 " set tabs/shiftwidth by file type
 autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType go setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType terraform setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType matlab setlocal shiftwidth=4 softtabstop=4 expandtab
+
+" show indentation guide
+set list
+set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮
+set listchars+=space:·
 
 " show a visual line under the cursor's current line
 set cursorline
