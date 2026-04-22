@@ -132,6 +132,15 @@ alias kp='kubectl -n phoenix'
 source ~/work/utils/destroy_deployment.sh
 source ~/work/utils/clean_merged_branches.sh
 source ~/work/utils/make_jwt.sh
+# Kubeconfig switcher
+function kc() {
+  if [[ -z "$1" ]]; then
+    ls ~/.kube/config*
+  else
+    export KUBECONFIG="$1"
+    echo "KUBECONFIG set to $1"
+  fi
+}
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
